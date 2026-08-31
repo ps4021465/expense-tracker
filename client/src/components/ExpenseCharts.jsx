@@ -71,6 +71,13 @@ const CustomBarTooltip = ({ active, payload, label }) => {
   return null;
 };
 
+/**
+ * ExpenseCharts Component
+ * Renders Recharts Donut PieChart (category distribution) and BarChart (monthly spend trends)
+ * @param {Object} props
+ * @param {Object} props.summary - Summary data object containing categoryBreakdown and monthlyBreakdown
+ * @param {boolean} props.isLoading - Loading state indicator
+ */
 export const ExpenseCharts = ({ summary = {}, isLoading = false }) => {
   const { categoryBreakdown = [], monthlyBreakdown = [] } = summary;
 
