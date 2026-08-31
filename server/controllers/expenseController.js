@@ -1,7 +1,13 @@
 const { pool } = require('../config/db');
 
 /**
- * Helper function for input validation
+ * Validates expense payload before creating or updating records
+ * @param {Object} payload - Expense fields
+ * @param {string} payload.title - Title or description
+ * @param {number|string} payload.amount - Positive expenditure amount
+ * @param {string} payload.category - Expense category
+ * @param {string} payload.date - Date in YYYY-MM-DD format
+ * @returns {string[]} Array of error message strings (empty if valid)
  */
 const validateExpenseInput = ({ title, amount, category, date }) => {
   const errors = [];
