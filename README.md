@@ -27,6 +27,34 @@ A modern, responsive, full-stack Personal Finance & Expense Tracker application 
   - Input validation middleware and error handling for MySQL error codes (`ECONNREFUSED`, `ER_NO_SUCH_TABLE`, etc.).
   - CORS enabled and environment variable support with `dotenv`.
 
+## 🏗️ Project Architecture
+
+```
+┌────────────────────────────────────────────────────────┐
+│               React Client (Port 3000)                 │
+│  - Vite Dev Server & HMR                               │
+│  - Recharts Visual Analytics (Pie & Bar Charts)        │
+│  - Web Audio Synthesized Budget Alarm System           │
+│  - Centralized Axios API Service (api.js)              │
+└──────────────────────────┬─────────────────────────────┘
+                           │ HTTP REST Requests (/api/expenses)
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│              Express Server (Port 5000)                │
+│  - REST API Routing & Input Validation                 │
+│  - SQL Aggregations (GROUP BY, SUM, COUNT)             │
+│  - Centralized MySQL Error Handler Middleware          │
+└──────────────────────────┬─────────────────────────────┘
+                           │ Async Query Pool
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│             MySQL Database (Port 3306)                 │
+│  - Database: expense_tracker                           │
+│  - Table: expenses                                     │
+│  - mysql2/promise Connection Pooling                   │
+└────────────────────────────────────────────────────────┘
+```
+
 ---
 
 ## 🏗️ Project Structure
