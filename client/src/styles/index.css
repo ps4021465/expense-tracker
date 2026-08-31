@@ -9,7 +9,14 @@
    ========================================================== */
 
 :root {
-  /* Core Palette Tokens */
+  /* ==========================================================
+     BRAND PALETTE TOKENS
+     - Pine Green (#244c3c): Primary brand identity & headings
+     - Sage Green (#526c5b): Sub-headings, subtle borders & icons
+     - Cream Khaki (#dcdcbb): Ambient light meshes & soft badges
+     - Slate Teal (#425e6a): Metric labels & table column headers
+     - Tangerine Orange (#fa6e06): High-visibility CTA & breach alerts
+     ========================================================== */
   --pine-dark: #244c3c;
   --pine-medium: #2e5d4a;
   --sage: #526c5b;
