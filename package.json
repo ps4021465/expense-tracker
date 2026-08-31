@@ -11,6 +11,13 @@
     "install:all": "npm install && npm install --prefix server && npm install --prefix client",
     "build:client": "npm run build --prefix client"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ps4021465/expense-tracker.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": ["expense-tracker", "fullstack", "react", "express", "mysql"],
   "author": "",
   "license": "ISC",
